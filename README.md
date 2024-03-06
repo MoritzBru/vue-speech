@@ -2,6 +2,11 @@
 
 > Using Vue, Vite, VueUse, TypeScript, Tailwind & Iconify
 
+## TODOs
+
+- dark/light mode toggle
+- i18n
+
 ## Project Setup
 
 ```sh
