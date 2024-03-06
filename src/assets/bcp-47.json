@@ -1,0 +1,320 @@
+[
+  {
+     "tag":"ar-SA",
+     "language":"Arabic",
+     "region":"Saudi Arabia",
+     "label":"Arabic (Saudi Arabia)"
+  },
+  {
+     "tag":"bn-BD",
+     "language":"Bangla",
+     "region":"Bangladesh",
+     "label":"Bangla (Bangladesh)"
+  },
+  {
+     "tag":"bn-IN",
+     "language":"Bangla",
+     "region":"India",
+     "label":"Bangla (India)"
+  },
+  {
+     "tag":"cs-CZ",
+     "language":"Czech",
+     "region":"Czech Republic",
+     "label":"Czech (Czech Republic)"
+  },
+  {
+     "tag":"da-DK",
+     "language":"Danish",
+     "region":"Denmark",
+     "label":"Danish (Denmark)"
+  },
+  {
+     "tag":"de-AT",
+     "language":"German",
+     "region":"Austria",
+     "label":"Austrian German"
+  },
+  {
+     "tag":"de-CH",
+     "language":"German",
+     "region":"Switzerland",
+     "label":"'Swiss' German"
+  },
+  {
+     "tag":"de-DE",
+     "language":"German",
+     "region":"Germany",
+     "label":"Standard German (as spoken in Germany)"
+  },
+  {
+     "tag":"el-GR",
+     "language":"Greek",
+     "region":"Greece",
+     "label":"Modern Greek"
+  },
+  {
+     "tag":"en-AU",
+     "language":"English",
+     "region":"Australia",
+     "label":"Australian English"
+  },
+  {
+     "tag":"en-CA",
+     "language":"English",
+     "region":"Canada",
+     "label":"Canadian English"
+  },
+  {
+     "tag":"en-GB",
+     "language":"English",
+     "region":"United Kingdom",
+     "label":"British English"
+  },
+  {
+     "tag":"en-IE",
+     "language":"English",
+     "region":"Ireland",
+     "label":"Irish English"
+  },
+  {
+     "tag":"en-IN",
+     "language":"English",
+     "region":"India",
+     "label":"Indian English"
+  },
+  {
+     "tag":"en-NZ",
+     "language":"English",
+     "region":"New Zealand",
+     "label":"New Zealand English"
+  },
+  {
+     "tag":"en-US",
+     "language":"English",
+     "region":"United States",
+     "label":"US English"
+  },
+  {
+     "tag":"en-ZA",
+     "language":"English",
+     "region":"South Africa",
+     "label":"English (South Africa)"
+  },
+  {
+     "tag":"es-AR",
+     "language":"Spanish",
+     "region":"Argentina",
+     "label":"Argentine Spanish"
+  },
+  {
+     "tag":"es-CL",
+     "language":"Spanish",
+     "region":"Chile",
+     "label":"Chilean Spanish"
+  },
+  {
+     "tag":"es-CO",
+     "language":"Spanish",
+     "region":"Columbia",
+     "label":"Colombian Spanish"
+  },
+  {
+     "tag":"es-ES",
+     "language":"Spanish",
+     "region":"Spain",
+     "label":"Castilian Spanish (as spoken in Central-Northern Spain)"
+  },
+  {
+     "tag":"es-MX",
+     "language":"Spanish",
+     "region":"Mexico",
+     "label":"Mexican Spanish"
+  },
+  {
+     "tag":"es-US",
+     "language":"Spanish",
+     "region":"United States",
+     "label":"American Spanish"
+  },
+  {
+     "tag":"fi-FI",
+     "language":"Finnish",
+     "region":"Finland",
+     "label":"Finnish (Finland)"
+  },
+  {
+     "tag":"fr-BE",
+     "language":"French",
+     "region":"Belgium",
+     "label":"Belgian French"
+  },
+  {
+     "tag":"fr-CA",
+     "language":"French",
+     "region":"Canada",
+     "label":"Canadian French"
+  },
+  {
+     "tag":"fr-CH",
+     "language":"French",
+     "region":"Switzerland",
+     "label":"'Swiss' French"
+  },
+  {
+     "tag":"fr-FR",
+     "language":"French",
+     "region":"France",
+     "label":"Standard French (especially in France)"
+  },
+  {
+     "tag":"he-IL",
+     "language":"Hebrew",
+     "region":"Israel",
+     "label":"Hebrew (Israel)"
+  },
+  {
+     "tag":"hi-IN",
+     "language":"Hindi",
+     "region":"India",
+     "label":"Hindi (India)"
+  },
+  {
+     "tag":"hu-HU",
+     "language":"Hungarian",
+     "region":"Hungary",
+     "label":"Hungarian (Hungary)"
+  },
+  {
+     "tag":"id-ID",
+     "language":"Indonesian",
+     "region":"Indonesia",
+     "label":"Indonesian (Indonesia)"
+  },
+  {
+     "tag":"it-CH",
+     "language":"Italian",
+     "region":"Switzerland",
+     "label":"'Swiss' Italian"
+  },
+  {
+     "tag":"it-IT",
+     "language":"Italian",
+     "region":"Italy",
+     "label":"Standard Italian (as spoken in Italy)"
+  },
+  {
+     "tag":"ja-JP",
+     "language":"Japanese",
+     "region":"Japan",
+     "label":"Japanese (Japan)"
+  },
+  {
+     "tag":"ko-KR",
+     "language":"Korean",
+     "region":"Republic of Korea",
+     "label":"Korean (Republic of Korea)"
+  },
+  {
+     "tag":"nl-BE",
+     "language":"Dutch",
+     "region":"Belgium",
+     "label":"Belgian Dutch"
+  },
+  {
+     "tag":"nl-NL",
+     "language":"Dutch",
+     "region":"The Netherlands",
+     "label":"Standard Dutch (as spoken in The Netherlands)"
+  },
+  {
+     "tag":"no-NO",
+     "language":"Norwegian",
+     "region":"Norway",
+     "label":"Norwegian (Norway)"
+  },
+  {
+     "tag":"pl-PL",
+     "language":"Polish",
+     "region":"Poland",
+     "label":"Polish (Poland)"
+  },
+  {
+     "tag":"pt-BR",
+     "language":"Portugese",
+     "region":"Brazil",
+     "label":"Brazilian Portuguese"
+  },
+  {
+     "tag":"pt-PT",
+     "language":"Portugese",
+     "region":"Portugal",
+     "label":"European Portuguese (as written and spoken in Portugal)"
+  },
+  {
+     "tag":"ro-RO",
+     "language":"Romanian",
+     "region":"Romania",
+     "label":"Romanian (Romania)"
+  },
+  {
+     "tag":"ru-RU",
+     "language":"Russian",
+     "region":"Russian Federation",
+     "label":"Russian (Russian Federation)"
+  },
+  {
+     "tag":"sk-SK",
+     "language":"Slovak",
+     "region":"Slovakia",
+     "label":"Slovak (Slovakia)"
+  },
+  {
+     "tag":"sv-SE",
+     "language":"Swedish",
+     "region":"Sweden",
+     "label":"Swedish (Sweden)"
+  },
+  {
+     "tag":"ta-IN",
+     "language":"Tamil",
+     "region":"India",
+     "label":"Indian Tamil"
+  },
+  {
+     "tag":"ta-LK",
+     "language":"Tamil",
+     "region":"Sri Lanka",
+     "label":"Sri Lankan Tamil"
+  },
+  {
+     "tag":"th-TH",
+     "language":"Thai",
+     "region":"Thailand",
+     "label":"Thai (Thailand)"
+  },
+  {
+     "tag":"tr-TR",
+     "language":"Turkish",
+     "region":"Turkey",
+     "label":"Turkish (Turkey)"
+  },
+  {
+     "tag":"zh-CN",
+     "language":"Chinese",
+     "region":"China",
+     "label":"Mainland China, simplified characters"
+  },
+  {
+     "tag":"zh-HK",
+     "language":"Chinese",
+     "region":"Hong Kong",
+     "label":"Hong Kong, traditional characters"
+  },
+  {
+     "tag":"zh-TW",
+     "language":"Chinese",
+     "region":"Taiwan",
+     "label":"Taiwan, traditional characters"
+  }
+]

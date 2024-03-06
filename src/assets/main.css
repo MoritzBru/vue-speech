@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  input,
+  textarea {
+    @apply invalid:border-error invalid:focus:outline-error invalid:focus:border-error invalid:focus-within:outline-error invalid:focus-within:border-error
+  }
+}
