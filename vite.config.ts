@@ -9,6 +9,7 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/vue-speech/',
   plugins: [
     vue(),
     Icons({
