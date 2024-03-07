@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/MoritzBru/vue-speech/main/src/assets/icons/logo.svg" alt="logo" width="200"/>
+
 # vue speech
 
 > Using Vue, Vite, VueUse, TypeScript, Tailwind & Iconify
