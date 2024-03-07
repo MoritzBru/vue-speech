@@ -13,7 +13,7 @@ defineSlots<{
 </script>
 
 <template>
-  <label class="form-control w-full">
+  <label class="form-control max-w-full truncate">
     <div class="label">
       <span class="label-text">{{ props.label }}</span>
     </div>

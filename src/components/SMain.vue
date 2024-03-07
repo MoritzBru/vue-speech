@@ -131,12 +131,13 @@ onMounted(() => {
     class="mt-4"
   >
     <div class="flex flex-col gap-4">
-      <div class="flex w-full gap-4">
+      <div class="flex w-full flex-col flex-wrap gap-4 md:flex-row">
         <SSelect
           v-model="lang"
           label="Language"
           bottom-label="Language for detection."
           :options="groupedLangs"
+          class="grow"
         >
           <template #options="{ opts }">
             <option
@@ -154,6 +155,7 @@ onMounted(() => {
           label="Voice"
           bottom-label="Voice to read the senences."
           :options="groupedVoices"
+          class="grow"
         >
           <template #options="{ opts }">
             <option
@@ -185,7 +187,7 @@ onMounted(() => {
       />
     </div>
 
-    <div class="mt-6 flex justify-center gap-4">
+    <div class="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
       <button
         class="btn btn-success"
         :disabled="speechRecognition.isListening.value"
