@@ -5,7 +5,6 @@ const props = defineProps<{
 }>();
 
 const modelValue = defineModel<string>({ required: true });
-
 </script>
 
 <template>

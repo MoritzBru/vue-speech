@@ -117,7 +117,6 @@ function reset() {
 onMounted(() => {
   getVoices();
 });
-
 </script>
 
 <template>

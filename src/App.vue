@@ -6,7 +6,7 @@ import SMain from '@/components/SMain.vue';
 <template>
   <SHeader />
 
-  <main class="container mt-4">
+  <main class="container my-6">
     <SMain />
   </main>
 </template>
