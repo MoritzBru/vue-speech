@@ -10,7 +10,9 @@ import PhMicrophoneDuotone from '~icons/ph/microphone-duotone';
 import PhMicrophoneSlashDuotone from '~icons/ph/microphone-slash-duotone';
 import PhArrowCounterClockwiseDuotone from '~icons/ph/arrow-counter-clockwise-duotone';
 
-import bcp47 from '@/assets/bcp-47.json';
+import {
+  DELAY_IN_MS, BCP47, DEFAULT_CATCH_PHRASE, DEFAULT_SENTENCES, DELIMITER,
+} from '@/helpers/constants';
 
 import SIntro from '@/components/SIntro.vue';
 import SSupportWarning from '@/components/SSupportWarning.vue';
@@ -19,10 +21,8 @@ import STextarea from '@/components/STextarea.vue';
 import SSelect from '@/components/SSelect.vue';
 import SAccordion from '@/components/SAccordion.vue';
 
-const DELAY_IN_MS = 300;
-
 const lang = ref('en-GB');
-const langs = bcp47;
+const langs = BCP47;
 // @ts-expect-error: missing property groupBy
 const groupedLangs: Record<string, typeof langs> = Object.groupBy(langs, ({ language }) => language);
 
@@ -38,19 +38,15 @@ function getVoices() {
       const synth = window.speechSynthesis;
       voices.value = synth.getVoices();
       voice.value = voices.value[0];
-    }, 100);
+    }, DELAY_IN_MS);
   }
 }
 
-const catchPhrase = ref('What is your question');
+const catchPhrase = ref(DEFAULT_CATCH_PHRASE);
 
-const sentences = ref(`What is your name?
-How old are you?
-Where do you live?
-`);
+const sentences = ref(DEFAULT_SENTENCES);
 
-const delimiterChar = '\n';
-const splitSenteces = computed(() => sentences.value.trim().split(delimiterChar));
+const splitSenteces = computed(() => sentences.value.trim().split(DELIMITER));
 const currentSentenceIdx = ref(0);
 const currentSentence = computed(() => splitSenteces.value[currentSentenceIdx.value]);
 
@@ -177,10 +173,11 @@ onMounted(() => {
         :disabled="isActive"
       />
 
+      <!-- @ts-expect-error: missing property replaceAll -->
       <STextarea
         v-model="sentences"
         label="Sentences"
-        bottom-label="Delimited by a new line."
+        :bottom-label="`Delimited by <${DELIMITER.replace('\n', '\\n')}>`"
         class="min-h-48"
         required
       />
