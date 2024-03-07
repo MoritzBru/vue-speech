@@ -2,34 +2,9 @@
 
 # vue speech
 
-> Using Vue, Vite, VueUse, TypeScript, Tailwind & Iconify
+> Using Vue, Vite, VueUse, TypeScript & Tailwind
 
-## TODOs
+This is a simple tool that uses speech synthesis and speech recognition.
+It can listen to you and if it recognises the _catch phrase_, it will read you a sentence from the list of _sentences_ and then listen again for your answers and list them out to you.
 
-- dark/light mode toggle
-- i18n
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-
+Inspired by [Ioana Orca's](https://github.com/IoanaOrca) meditation sessions.
