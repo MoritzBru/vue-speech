@@ -14,3 +14,5 @@ export const DEFAULT_SENTENCES = [
   'Do I practice what I preach?',
   'What is my happy place?',
 ].join(DELIMITER);
+
+export const DEFAULT_LANGUANGE = 'en-GB';

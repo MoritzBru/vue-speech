@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {
-  computed, onMounted, ref,
+  computed, onMounted, ref, watch,
 } from 'vue';
 import {
-  useSpeechRecognition, useSpeechSynthesis, watchDebounced, until,
+  useSpeechRecognition, useSpeechSynthesis, watchDebounced, until, useStorage,
 } from '@vueuse/core';
 
 import PhMicrophoneDuotone from '~icons/ph/microphone-duotone';
@@ -11,7 +11,7 @@ import PhMicrophoneSlashDuotone from '~icons/ph/microphone-slash-duotone';
 import PhArrowCounterClockwiseDuotone from '~icons/ph/arrow-counter-clockwise-duotone';
 
 import {
-  DELAY_IN_MS, BCP47, DEFAULT_CATCH_PHRASE, DEFAULT_SENTENCES, DELIMITER,
+  DELAY_IN_MS, BCP47, DEFAULT_CATCH_PHRASE, DEFAULT_SENTENCES, DELIMITER, DEFAULT_LANGUANGE,
 } from '@/helpers/constants';
 
 import SIntro from '@/components/SIntro.vue';
@@ -21,12 +21,14 @@ import STextarea from '@/components/STextarea.vue';
 import SSelect from '@/components/SSelect.vue';
 import SAccordion from '@/components/SAccordion.vue';
 
-const lang = ref('en-GB');
+const lang = useStorage('vs:lang', DEFAULT_LANGUANGE);
 const langs = BCP47;
 // @ts-expect-error: missing property groupBy
 const groupedLangs: Record<string, typeof langs> = Object.groupBy(langs, ({ language }) => language);
 
-const voice = ref<SpeechSynthesisVoice>(undefined as unknown as SpeechSynthesisVoice);
+// workaround to store only voiceURI
+const persistedVoice = useStorage('vs:voice', '');
+const voice = ref(undefined as unknown as SpeechSynthesisVoice);
 const voices = ref<SpeechSynthesisVoice[]>([]);
 // @ts-expect-error: missing property groupBy
 const groupedVoices = computed<Record<string, SpeechSynthesisVoice[]>>(() => Object.groupBy(voices.value, ({ lang }) => lang));
@@ -37,14 +39,16 @@ function getVoices() {
     setTimeout(() => {
       const synth = window.speechSynthesis;
       voices.value = synth.getVoices();
-      voice.value = voices.value[0];
+      voice.value = voices.value.find((v) => v.voiceURI === persistedVoice.value) ?? voices.value[0];
     }, DELAY_IN_MS);
   }
 }
 
-const catchPhrase = ref(DEFAULT_CATCH_PHRASE);
+watch(voice, () => persistedVoice.value = voice.value.voiceURI);
 
-const sentences = ref(DEFAULT_SENTENCES);
+const catchPhrase = useStorage('vs:catchPhrase', DEFAULT_CATCH_PHRASE);
+
+const sentences = useStorage('vs:sentences', DEFAULT_SENTENCES);
 
 const splitSenteces = computed(() => sentences.value.trim().split(DELIMITER));
 const currentSentenceIdx = ref(0);
@@ -177,8 +181,7 @@ onMounted(() => {
       <STextarea
         v-model="sentences"
         label="Sentences"
-        :bottom-label="`Delimited by <${DELIMITER.replace('\n', '\\n')}>`"
-        class="min-h-48"
+        :bottom-label="`Delimited by ${DELIMITER.replace('\n', '\\n')}`"
         required
       />
     </div>
